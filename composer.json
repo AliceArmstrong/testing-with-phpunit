@@ -1,8 +1,9 @@
 {
     "scripts": {
+        "test-original": "./vendor/bin/phpunit",
         "test": "./vendor/bin/phpunit --testdox --colors=always",
         "test-runtime": "./vendor/bin/phpunit --testdox --verbose --colors=always",
-        "test-original": "./vendor/bin/phpunit"
+        "coverage": "./vendor/bin/phpunit --coverage-text=tests"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
