@@ -12,5 +12,8 @@
         "classmap": [
             "src/"
         ]
+    },
+    "require": {
+        "laravel/laravel": "^7.3"
     }
 }

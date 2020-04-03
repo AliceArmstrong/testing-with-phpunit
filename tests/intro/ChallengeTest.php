@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-final class EmailTest extends TestCase
+final class ChallengeTest extends TestCase
 {
     protected function setUp(): void
     {

@@ -1,8 +1,9 @@
 <?php declare(strict_types=1);
 
-final class Email
+final class Challenge
 {
-    private $email;
+    // private $email;
+    private $customer;
 
     private function __construct(string $email)
     {
