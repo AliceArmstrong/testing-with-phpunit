@@ -2,35 +2,13 @@
 
 final class Challenge
 {
-    // private $email;
-    private $customer;
-
-    private function __construct(string $email)
+    public function __construct(Email $email)
     {
-        $this->ensureIsValidEmail($email);
-
         $this->email = $email;
     }
 
-    public static function fromString(string $email): self
-    {
-        return new self($email);
-    }
-
-    public function __toString(): string
+    public function getEmail()
     {
         return $this->email;
-    }
-
-    private function ensureIsValidEmail(string $email): void
-    {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new InvalidArgumentException(
-                sprintf(
-                    '"%s" is not a valid email address',
-                    $email
-                )
-            );
-        }
     }
 }

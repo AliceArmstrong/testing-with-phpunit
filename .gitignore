@@ -1,2 +1,5 @@
+/vendor
 .env
-/answers
+/tests/Intro/AnswersTest.php
+/tests/Doubles/AnswersTest.php
+/tests/AdvancedTechniques/AnswersTest.php

@@ -4,32 +4,24 @@ use PHPUnit\Framework\TestCase;
 
 final class ChallengeTest extends TestCase
 {
-    protected function setUp(): void
+    public function testCanBeCreated(): void
     {
-        parent::setUp();
-        // var_dump('setUp() function gets called before every test.');
-    }
+        $email = Email::fromString('test@test.com');
+        $user = new Challenge($email);
 
-    public function testCanBeCreatedFromValidEmailAddress(): void
-    {
         $this->assertInstanceOf(
-            Email::class,
-            Email::fromString('user@example.com')
+            Challenge::class,
+            $user
         );
     }
 
-    public function testCannotBeCreatedFromInvalidEmailAddress(): void
+    public function testHasCorrectEmail(): void
     {
-        $this->expectException(InvalidArgumentException::class);
 
-        Email::fromString('invalid');
     }
 
-    public function testCanBeUsedAsString(): void
+    public function testCannotBeCreatedWithInvalidEmail(): void
     {
-        $this->assertEquals(
-            'user@example.com',
-            Email::fromString('user@example.com')
-        );
+
     }
 }
