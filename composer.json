@@ -14,6 +14,6 @@
         ]
     },
     "require": {
-        "laravel/laravel": "^7.3"
+        "laravel/laravel": "^8.4"
     }
 }
